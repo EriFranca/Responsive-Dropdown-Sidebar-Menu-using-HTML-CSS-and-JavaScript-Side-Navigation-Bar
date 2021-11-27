@@ -210,7 +210,7 @@
 }
 .home-section{
   position: relative;
-  background: #7dbfdd;
+  /*background: #7dbfdd;*/
   background-image: "image/profile.jpg";
   height: 100vh;
   left: 260px;
