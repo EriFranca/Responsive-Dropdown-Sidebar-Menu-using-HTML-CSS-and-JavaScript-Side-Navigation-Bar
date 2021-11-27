@@ -210,7 +210,6 @@
 }
 .home-section{
   position: relative;
-  background: -moz-linear-gradient(-45deg,red,blue);
   background-image: -moz-linear-gradient(-45deg,red,blue);
   height: 100vh;
   left: 260px;
