@@ -211,6 +211,7 @@
 .home-section{
   position: relative;
   background: #eb5009;
+  background-image: "image/profile.jpg";
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
