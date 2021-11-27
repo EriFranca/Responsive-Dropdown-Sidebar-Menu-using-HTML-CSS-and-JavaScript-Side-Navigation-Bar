@@ -210,7 +210,7 @@
 }
 .home-section{
   position: relative;
-  background-image: "image/profile.jpg";
+  background: -moz-linear-gradient(-45deg,red,blue);
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
