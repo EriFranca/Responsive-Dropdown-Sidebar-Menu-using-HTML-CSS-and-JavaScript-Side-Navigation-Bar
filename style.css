@@ -210,7 +210,7 @@
 }
 .home-section{
   position: relative;
-  background: #fcfcfc;
+  background: #161616;
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
@@ -221,7 +221,6 @@
   width: calc(100% - 78px);
 }
 .home-section .home-content{
-  background: black;
   height: 60px;
   display: flex;
   align-items: center;
