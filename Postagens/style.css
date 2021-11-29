@@ -211,8 +211,8 @@
 }
 .home-section{
   position: relative;
-  background: linear-gradient(-45deg, rgb(36 0 0) 0%, rgb(121 9 63) 35%, rgb(98 0 255) 100%);
-  /*background: url("image/profile.jpg");*/
+  /*background: linear-gradient(-45deg, rgb(36 0 0) 0%, rgb(121 9 63) 35%, rgb(98 0 255) 100%);*/
+  background: url("image/profile.bgremover.png");
   height: 100vh;
   left: 260px;
   width: calc(100% - 260px);
