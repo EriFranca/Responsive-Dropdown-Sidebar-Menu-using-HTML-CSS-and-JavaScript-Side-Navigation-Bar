@@ -153,9 +153,248 @@
           <td>26</td>
           <td>Designer</td>
       </tr>
-      <tr>
-        <input type="text" placeholder="Digite a chave de 44 caracteres da nota." required="" class="form-control text-uppercase" id="chave-nota" autocomplete="off" name="chave-nota">
-      </tr>
+      
+        <div class="tabs-wrapper " id="formAba">
+          <ul class="nav classic-tabs " style="background-color:#0d47a1;" role="tablist">
+              <li class="nav-item" style="width: 50%;">
+                  <a id="aba1" class="nav-link waves-light waves-effect waves-light active show" data-toggle="tab" href="#panel1" role="tab" aria-selected="true"><i class="fas fa-clipboard-list fa-2x" aria-hidden="true"></i><br> <span style="font-weight: bold;"> FAZER LEITURA NFES </span></a>
+              </li>
+              <li class="nav-item" style="width: 50%;">
+                  <a id="aba2" class="nav-link waves-light waves-effect waves-light" data-toggle="tab" href="#panel2" role="tab" aria-selected="false"><i class="fas fa-tasks fa-2x" aria-hidden="true"></i><br> LISTAGEM DE NOTAS RECENTES </a>
+              </li>
+          </ul>
+      </div>
+      <div class="tab-content " style="display: block;">
+        <div class="tab-pane fade in active show" id="panel1" role="tabpanel">
+            <div class="card border-dark  mb-2" style="max-width:100%;">
+                <div class="card-header" style="background-color: #E0E0E0; padding:5px;"><b>Recebimento de Nota Fiscal</b></div>
+                <div style="margin-left:2px; margin-top:5px; margin-right:2px;" class="row">
+                    <div class="col-6">
+                        <i class="fas fa-key fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Chave da Nota </label>&nbsp;<i style="color:red;  font-size:10px; " class="fas fa-asterisk fa-1x active"></i>
+                        <input type="text" placeholder="Digite a chave de 44 caracteres da nota." required="" class="form-control text-uppercase" id="chave-nota" autocomplete="off" name="chave-nota">
+                    </div>
+
+                    <div class="col-12">
+                        <label> </label>
+                    </div>
+
+                    <div class="col-5">
+                        <i class="fas fa-user fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Fornecedor </label>
+                        <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="fornecedor" autocomplete="off" disabled="disabled" name="fornecedor">
+                        <input type="hidden" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="documento" autocomplete="off" disabled="disabled" name="documento" value="">
+                    </div>
+
+                    <div class="col-12">
+                        <label> </label>
+                    </div>
+
+                    <div class="col-5">
+                        <i class="fas fa-file-invoice fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Número da Nota </label>
+                        <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="numero-nota" autocomplete="off" disabled="disabled" name="numero-nota">
+                    </div>
+
+                    <div class="col-12">
+                        <label> </label>
+                    </div>
+
+                    <div class="col-5">
+                        <i class="fas fa-address-card fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Série </label>
+                        <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="serie" autocomplete="off" disabled="disabled" name="serie">
+                    </div>
+
+                    <div class="col-12">
+                        <label> </label>
+                    </div>
+
+                    <div class="col-5 pt-2">
+                        <input type="checkbox" class="filled-in" name="freteFOB" id="freteFOB" value="true">
+                        <label for="freteFOB" style="padding-left: 25px;line-height: 20px;margin-right: 10px">FreteFOB</label>
+                    </div>
+
+                    <div class="col-12">
+                        <label> </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="panel2" role="tabpanel">
+            <div class="mb-2" style="max-width:100%;">
+                <div style="margin-left:2px; margin-top:5px; margin-right:2px;" class="row">
+                    <div class="card card-cascade wider reverse col-md-12">
+                        <div class="card-body text-left wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+                            <div class="table-wrapper" style=" overflow-x: scroll;">
+                                <div id="example_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-2"><div class="dataTables_length" id="example_length"><label>Exibir<select name="example_length" aria-controls="example" class=" form-control "><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label></div></div><div class="col-sm-12 col-md-3"><div id="example_filter" class="dataTables_filter"><label><i class="fas fa-search"></i> Pesquisa<input type="search" class="form-control" placeholder="" aria-controls="example"></label></div></div>
+    <div class="col-sm-12 col-md-6">
+        <div class="dataTables_length" id="buscaData">
+            <form class="row">
+                <div class="col-sm-5 col-md-5">
+                    <label>Data Inicial
+                    <input type="text" style="padding: .375rem .75rem;" class="form-control datepicker" id="data-inicial" placeholder="Escolha a data" name="data-inicial" autocomplete="off" maxlength="10"></label>
+                </div>
+                <div class="col-sm-5 col-md-5">
+                    <label>Data Final
+                    <input type="text" style="padding: .375rem .75rem;" class="form-control datepicker" id="data-final" placeholder="Escolha a data" name="data-final" autocomplete="off" maxlength="10"></label>
+                </div>
+            </form>
+        </div>
+    </div></div><div class="row"><div class="col-sm-12"><table id="example" class="cell-border compact stripe dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="example_info">
+                                    <thead style="text-align: center;">
+                                        <tr role="row"><th style="padding: 4px 10px 5px; width: 0px;" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Ações">Ações</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Núm. NF: activate to sort column ascending" style="width: 0px;">Núm. NF</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="DT. ALTERAÇÃO: activate to sort column ascending" style="width: 0px;" aria-sort="descending">DT. ALTERAÇÃO</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="FORNECEDOR: activate to sort column ascending" style="width: 0px;">FORNECEDOR</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="DESTINO: activate to sort column ascending" style="width: 0px;">DESTINO</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="OPERADOR: activate to sort column ascending" style="width: 0px;">OPERADOR</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="STATUS: activate to sort column ascending" style="width: 0px;">STATUS</th></tr>
+                                    </thead>
+                                    <tbody>
+
+                                    <tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211102749278000191550010000261131000675672" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55295" style="display: block;" data-chave="24211102749278000191550010000261131000675672">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211102749278000191550010000261131000675672" data-toggle="modal" data-target="#historico" data-id="55295" data-historico="24211102749278000191550010000261131000675672">Visualizar historico</a></div></div></td><td>26113</td><td class="sorting_1">30/11/2021 11:42:34</td><td>3000198 - UNIGRAFICA GRAFICA E EDITORA LTDA</td><td>0005 - Loja Petrópolis</td><td>2398 - Marisa Rodrigues Da Fonseca</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009141822560508" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55287" style="display: block;" data-chave="24211183310441009173550010001009141822560508">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009141822560508" data-toggle="modal" data-target="#historico" data-id="55287" data-historico="24211183310441009173550010001009141822560508">Visualizar historico</a></div></div></td><td>100914</td><td class="sorting_1">30/11/2021 11:41:21</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009131100027009" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55286" style="display: block;" data-chave="24211183310441009173550010001009131100027009">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009131100027009" data-toggle="modal" data-target="#historico" data-id="55286" data-historico="24211183310441009173550010001009131100027009">Visualizar historico</a></div></div></td><td>100913</td><td class="sorting_1">30/11/2021 11:39:45</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211122108627000101550010000014591052474517" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55293" style="display: block;" data-chave="24211122108627000101550010000014591052474517">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211122108627000101550010000014591052474517" data-toggle="modal" data-target="#historico" data-id="55293" data-historico="24211122108627000101550010000014591052474517">Visualizar historico</a></div></div></td><td>1459</td><td class="sorting_1">30/11/2021 11:39:10</td><td>1003296 - MIRASSOL IND E COM DE DOCES EIRELI</td><td>0005 - Loja Petrópolis</td><td>2395 - Ubanizia Da Camara Ribeiro</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #EFAE40;"> Pedido não Informado/Incorreto </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009121310910890" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55285" style="display: block;" data-chave="24211183310441009173550010001009121310910890">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009121310910890" data-toggle="modal" data-target="#historico" data-id="55285" data-historico="24211183310441009173550010001009121310910890">Visualizar historico</a></div></div></td><td>100912</td><td class="sorting_1">30/11/2021 11:38:08</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009111675321707" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55288" style="display: block;" data-chave="24211183310441009173550010001009111675321707">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009111675321707" data-toggle="modal" data-target="#historico" data-id="55288" data-historico="24211183310441009173550010001009111675321707">Visualizar historico</a></div></div></td><td>100911</td><td class="sorting_1">30/11/2021 11:34:19</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211160409075015770550010023167571131062064" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55282" style="display: block;" data-chave="24211160409075015770550010023167571131062064">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211160409075015770550010023167571131062064" data-toggle="modal" data-target="#historico" data-id="55282" data-historico="24211160409075015770550010023167571131062064">Visualizar historico</a></div></div></td><td>2316757</td><td class="sorting_1">30/11/2021 11:20:10</td><td>1001823 - NESTLE BRASIL LTDA</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #EFAE40;"> Preço/Desconto </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211100521977000154550010003463651518005121" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55194" style="display: block;" data-chave="24211100521977000154550010003463651518005121">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211100521977000154550010003463651518005121" data-toggle="modal" data-target="#historico" data-id="55194" data-historico="24211100521977000154550010003463651518005121">Visualizar historico</a></div></div></td><td>346365</td><td class="sorting_1">30/11/2021 10:23:32</td><td>1001848 - NORDESTE FRUIT LTDA</td><td>0005 - Loja Petrópolis</td><td>2395 - Ubanizia Da Camara Ribeiro</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211140789018000139550010001582501518005124" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55206" style="display: block;" data-chave="24211140789018000139550010001582501518005124">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211140789018000139550010001582501518005124" data-toggle="modal" data-target="#historico" data-id="55206" data-historico="24211140789018000139550010001582501518005124">Visualizar historico</a></div></div></td><td>158250</td><td class="sorting_1">30/11/2021 10:22:59</td><td>1001408 - JOSE RODRIGUES DE FREITAS EPP</td><td>0005 - Loja Petrópolis</td><td>2395 - Ubanizia Da Camara Ribeiro</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211108403578000877550010004783231771401502" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="54145" style="display: block;" data-chave="24211108403578000877550010004783231771401502">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211108403578000877550010004783231771401502" data-toggle="modal" data-target="#historico" data-id="54145" data-historico="24211108403578000877550010004783231771401502">Visualizar historico</a></div></div></td><td>478323</td><td class="sorting_1">30/11/2021 09:02:23</td><td>1000549 - COMERCIAL JOSE LUCENA LTDA</td><td>0005 - Loja Petrópolis</td><td>2386 - Aryosvaldo Bezerra De Lima</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #EFAE40;"> Erro de tributação do Fornecedor </span> </h5></td></tr></tbody>
+                                </table><div id="example_processing" class="dataTables_processing card" style="display: none;"><i class="fa fa-spinner fa-spin fa-3x fa-fw" style=""></i><span class="sr-only">Loading...</span></div></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Exibindo 1 a 10 de 14 resultados</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example_previous"><a href="#" aria-controls="example" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item next" id="example_next"><a href="#" aria-controls="example" data-dt-idx="3" tabindex="0" class="page-link">Próximo</a></li></ul></div></div></div></div>
+                            </div>
+                            <hr class="my-0">
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade in active show" id="panel1" role="tabpanel">
+      <div class="card border-dark  mb-2" style="max-width:100%;">
+          <div class="card-header" style="background-color: #E0E0E0; padding:5px;"><b>Recebimento de Nota Fiscal</b></div>
+          <div style="margin-left:2px; margin-top:5px; margin-right:2px;" class="row">
+              <div class="col-6">
+                  <i class="fas fa-key fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Chave da Nota </label>&nbsp;<i style="color:red;  font-size:10px; " class="fas fa-asterisk fa-1x active"></i>
+                  <input type="text" placeholder="Digite a chave de 44 caracteres da nota." required="" class="form-control text-uppercase" id="chave-nota" autocomplete="off" name="chave-nota">
+              </div>
+
+              <div class="col-12">
+                  <label> </label>
+              </div>
+
+              <div class="col-5">
+                  <i class="fas fa-user fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Fornecedor </label>
+                  <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="fornecedor" autocomplete="off" disabled="disabled" name="fornecedor">
+                  <input type="hidden" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="documento" autocomplete="off" disabled="disabled" name="documento" value="">
+              </div>
+
+              <div class="col-12">
+                  <label> </label>
+              </div>
+
+              <div class="col-5">
+                  <i class="fas fa-file-invoice fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Número da Nota </label>
+                  <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="numero-nota" autocomplete="off" disabled="disabled" name="numero-nota">
+              </div>
+
+              <div class="col-12">
+                  <label> </label>
+              </div>
+
+              <div class="col-5">
+                  <i class="fas fa-address-card fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Série </label>
+                  <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="serie" autocomplete="off" disabled="disabled" name="serie">
+              </div>
+
+              <div class="col-12">
+                  <label> </label>
+              </div>
+
+              <div class="col-5 pt-2">
+                  <input type="checkbox" class="filled-in" name="freteFOB" id="freteFOB" value="true">
+                  <label for="freteFOB" style="padding-left: 25px;line-height: 20px;margin-right: 10px">FreteFOB</label>
+              </div>
+
+              <div class="col-12">
+                  <label> </label>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="card border-dark  mb-2" style="max-width:100%;">
+    <div class="card-header" style="background-color: #E0E0E0; padding:5px;"><b>Recebimento de Nota Fiscal</b></div>
+    <div style="margin-left:2px; margin-top:5px; margin-right:2px;" class="row">
+        <div class="col-6">
+            <i class="fas fa-key fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Chave da Nota </label>&nbsp;<i style="color:red;  font-size:10px; " class="fas fa-asterisk fa-1x active"></i>
+            <input type="text" placeholder="Digite a chave de 44 caracteres da nota." required="" class="form-control text-uppercase" id="chave-nota" autocomplete="off" name="chave-nota">
+        </div>
+
+        <div class="col-12">
+            <label> </label>
+        </div>
+
+        <div class="col-5">
+            <i class="fas fa-user fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Fornecedor </label>
+            <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="fornecedor" autocomplete="off" disabled="disabled" name="fornecedor">
+            <input type="hidden" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="documento" autocomplete="off" disabled="disabled" name="documento" value="">
+        </div>
+
+        <div class="col-12">
+            <label> </label>
+        </div>
+
+        <div class="col-5">
+            <i class="fas fa-file-invoice fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Número da Nota </label>
+            <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="numero-nota" autocomplete="off" disabled="disabled" name="numero-nota">
+        </div>
+
+        <div class="col-12">
+            <label> </label>
+        </div>
+
+        <div class="col-5">
+            <i class="fas fa-address-card fa-x5 col-sx-2 active"></i>&nbsp;<label class="active"> Série </label>
+            <input type="text" placeholder="Preenchida automaticamente." class="form-control text-uppercase" id="serie" autocomplete="off" disabled="disabled" name="serie">
+        </div>
+
+        <div class="col-12">
+            <label> </label>
+        </div>
+
+        <div class="col-5 pt-2">
+            <input type="checkbox" class="filled-in" name="freteFOB" id="freteFOB" value="true">
+            <label for="freteFOB" style="padding-left: 25px;line-height: 20px;margin-right: 10px">FreteFOB</label>
+        </div>
+
+        <div class="col-12">
+            <label> </label>
+        </div>
+    </div>
+</div>
+<div class="tab-pane fade" id="panel2" role="tabpanel">
+  <div class="mb-2" style="max-width:100%;">
+      <div style="margin-left:2px; margin-top:5px; margin-right:2px;" class="row">
+          <div class="card card-cascade wider reverse col-md-12">
+              <div class="card-body text-left wow fadeIn animated" style="visibility: visible; animation-name: fadeIn;">
+                  <div class="table-wrapper" style=" overflow-x: scroll;">
+                      <div id="example_wrapper" class="dataTables_wrapper container-fluid dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-2"><div class="dataTables_length" id="example_length"><label>Exibir<select name="example_length" aria-controls="example" class=" form-control "><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label></div></div><div class="col-sm-12 col-md-3"><div id="example_filter" class="dataTables_filter"><label><i class="fas fa-search"></i> Pesquisa<input type="search" class="form-control" placeholder="" aria-controls="example"></label></div></div>
+<div class="col-sm-12 col-md-6">
+<div class="dataTables_length" id="buscaData">
+  <form class="row">
+      <div class="col-sm-5 col-md-5">
+          <label>Data Inicial
+          <input type="text" style="padding: .375rem .75rem;" class="form-control datepicker" id="data-inicial" placeholder="Escolha a data" name="data-inicial" autocomplete="off" maxlength="10"></label>
+      </div>
+      <div class="col-sm-5 col-md-5">
+          <label>Data Final
+          <input type="text" style="padding: .375rem .75rem;" class="form-control datepicker" id="data-final" placeholder="Escolha a data" name="data-final" autocomplete="off" maxlength="10"></label>
+      </div>
+  </form>
+</div>
+</div></div><div class="row"><div class="col-sm-12"><table id="example" class="cell-border compact stripe dataTable no-footer" style="width: 100%;" role="grid" aria-describedby="example_info">
+                          <thead style="text-align: center;">
+                              <tr role="row"><th style="padding: 4px 10px 5px; width: 0px;" class="sorting_disabled" rowspan="1" colspan="1" aria-label="Ações">Ações</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Núm. NF: activate to sort column ascending" style="width: 0px;">Núm. NF</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="DT. ALTERAÇÃO: activate to sort column ascending" style="width: 0px;" aria-sort="descending">DT. ALTERAÇÃO</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="FORNECEDOR: activate to sort column ascending" style="width: 0px;">FORNECEDOR</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="DESTINO: activate to sort column ascending" style="width: 0px;">DESTINO</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="OPERADOR: activate to sort column ascending" style="width: 0px;">OPERADOR</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="STATUS: activate to sort column ascending" style="width: 0px;">STATUS</th></tr>
+                          </thead>
+                          <tbody>
+
+                          <tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211102749278000191550010000261131000675672" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55295" style="display: block;" data-chave="24211102749278000191550010000261131000675672">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211102749278000191550010000261131000675672" data-toggle="modal" data-target="#historico" data-id="55295" data-historico="24211102749278000191550010000261131000675672">Visualizar historico</a></div></div></td><td>26113</td><td class="sorting_1">30/11/2021 11:42:34</td><td>3000198 - UNIGRAFICA GRAFICA E EDITORA LTDA</td><td>0005 - Loja Petrópolis</td><td>2398 - Marisa Rodrigues Da Fonseca</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009141822560508" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55287" style="display: block;" data-chave="24211183310441009173550010001009141822560508">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009141822560508" data-toggle="modal" data-target="#historico" data-id="55287" data-historico="24211183310441009173550010001009141822560508">Visualizar historico</a></div></div></td><td>100914</td><td class="sorting_1">30/11/2021 11:41:21</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009131100027009" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55286" style="display: block;" data-chave="24211183310441009173550010001009131100027009">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009131100027009" data-toggle="modal" data-target="#historico" data-id="55286" data-historico="24211183310441009173550010001009131100027009">Visualizar historico</a></div></div></td><td>100913</td><td class="sorting_1">30/11/2021 11:39:45</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211122108627000101550010000014591052474517" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55293" style="display: block;" data-chave="24211122108627000101550010000014591052474517">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211122108627000101550010000014591052474517" data-toggle="modal" data-target="#historico" data-id="55293" data-historico="24211122108627000101550010000014591052474517">Visualizar historico</a></div></div></td><td>1459</td><td class="sorting_1">30/11/2021 11:39:10</td><td>1003296 - MIRASSOL IND E COM DE DOCES EIRELI</td><td>0005 - Loja Petrópolis</td><td>2395 - Ubanizia Da Camara Ribeiro</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #EFAE40;"> Pedido não Informado/Incorreto </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009121310910890" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55285" style="display: block;" data-chave="24211183310441009173550010001009121310910890">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009121310910890" data-toggle="modal" data-target="#historico" data-id="55285" data-historico="24211183310441009173550010001009121310910890">Visualizar historico</a></div></div></td><td>100912</td><td class="sorting_1">30/11/2021 11:38:08</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211183310441009173550010001009111675321707" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55288" style="display: block;" data-chave="24211183310441009173550010001009111675321707">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211183310441009173550010001009111675321707" data-toggle="modal" data-target="#historico" data-id="55288" data-historico="24211183310441009173550010001009111675321707">Visualizar historico</a></div></div></td><td>100911</td><td class="sorting_1">30/11/2021 11:34:19</td><td>1003067 - COOPERATIVA CENTRAL AURORA ALIMENTO</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211160409075015770550010023167571131062064" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55282" style="display: block;" data-chave="24211160409075015770550010023167571131062064">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211160409075015770550010023167571131062064" data-toggle="modal" data-target="#historico" data-id="55282" data-historico="24211160409075015770550010023167571131062064">Visualizar historico</a></div></div></td><td>2316757</td><td class="sorting_1">30/11/2021 11:20:10</td><td>1001823 - NESTLE BRASIL LTDA</td><td>0005 - Loja Petrópolis</td><td>2394 - Robson De Souza Costa </td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #EFAE40;"> Preço/Desconto </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211100521977000154550010003463651518005121" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55194" style="display: block;" data-chave="24211100521977000154550010003463651518005121">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211100521977000154550010003463651518005121" data-toggle="modal" data-target="#historico" data-id="55194" data-historico="24211100521977000154550010003463651518005121">Visualizar historico</a></div></div></td><td>346365</td><td class="sorting_1">30/11/2021 10:23:32</td><td>1001848 - NORDESTE FRUIT LTDA</td><td>0005 - Loja Petrópolis</td><td>2395 - Ubanizia Da Camara Ribeiro</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="odd"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211140789018000139550010001582501518005124" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="55206" style="display: block;" data-chave="24211140789018000139550010001582501518005124">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211140789018000139550010001582501518005124" data-toggle="modal" data-target="#historico" data-id="55206" data-historico="24211140789018000139550010001582501518005124">Visualizar historico</a></div></div></td><td>158250</td><td class="sorting_1">30/11/2021 10:22:59</td><td>1001408 - JOSE RODRIGUES DE FREITAS EPP</td><td>0005 - Loja Petrópolis</td><td>2395 - Ubanizia Da Camara Ribeiro</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #3815E6;"> Nota Liberada </span> </h5></td></tr><tr role="row" class="even"><td><div class="btn-group" role="group" aria-label="Acao"><button data-tooltip="button" data-placement="bottom" title="" class="btn blue-grey btn-sm dropdown-toggle mynotification" data-id="24211108403578000877550010004783231771401502" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="AÇÕES"><i class="fas fas fa-wrench pl-1"></i></button><div class="dropdown-menu" aria-labelledby="btnGroupDrop1"><a class="dropdown-item" data-toggle="modal" data-target="#gridSystemModal" onclick="openModalStatus(this)" data-id="54145" style="display: block;" data-chave="24211108403578000877550010004783231771401502">Atualizar Status</a><a class="dropdown-item" onclick="openModalHistorico(this)" data-chave="24211108403578000877550010004783231771401502" data-toggle="modal" data-target="#historico" data-id="54145" data-historico="24211108403578000877550010004783231771401502">Visualizar historico</a></div></div></td><td>478323</td><td class="sorting_1">30/11/2021 09:02:23</td><td>1000549 - COMERCIAL JOSE LUCENA LTDA</td><td>0005 - Loja Petrópolis</td><td>2386 - Aryosvaldo Bezerra De Lima</td><td><h5 class="mt-2" style="text-align: center;"><span class="badge " data-toggle="popover" style="background-color: #EFAE40;"> Erro de tributação do Fornecedor </span> </h5></td></tr></tbody>
+                      </table><div id="example_processing" class="dataTables_processing card" style="display: none;"><i class="fa fa-spinner fa-spin fa-3x fa-fw" style=""></i><span class="sr-only">Loading...</span></div></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Exibindo 1 a 10 de 14 resultados</div></div><div class="col-sm-12 col-md-7"><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><ul class="pagination"><li class="paginate_button page-item previous disabled" id="example_previous"><a href="#" aria-controls="example" data-dt-idx="0" tabindex="0" class="page-link">Anterior</a></li><li class="paginate_button page-item active"><a href="#" aria-controls="example" data-dt-idx="1" tabindex="0" class="page-link">1</a></li><li class="paginate_button page-item "><a href="#" aria-controls="example" data-dt-idx="2" tabindex="0" class="page-link">2</a></li><li class="paginate_button page-item next" id="example_next"><a href="#" aria-controls="example" data-dt-idx="3" tabindex="0" class="page-link">Próximo</a></li></ul></div></div></div></div>
+                  </div>
+                  <hr class="my-0">
+              </div>
+              <br>
+          </div>
+      </div>
+  </div>
+</div>
+        
+      
   </table>
   </section>
   
