@@ -293,4 +293,7 @@ button {
   /* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
   margin-left: .5em;
 }
+.table{
+  border-end-end-radius:1px ;
+}
 }
