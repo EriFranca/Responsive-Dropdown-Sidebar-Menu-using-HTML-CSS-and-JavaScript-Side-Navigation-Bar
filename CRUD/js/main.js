@@ -14,7 +14,7 @@ function handleBookEdit() {
 
     bookForm.setData($(cols[0]).text(), $(cols[1]).text(), $(cols[2]).text());
 
-    bookForm.setSubmitButtonText("Actualizar");
+    bookForm.setSubmitButtonText("Atualizar");
 }
 
 function handleBookDeleteClick() {
@@ -28,7 +28,7 @@ function handleBookSubmission(e) {
         return;
     }
 
-    if (bookForm.getSubmitButtonText() === "Actualizar") {
+    if (bookForm.getSubmitButtonText() === "Atualizar") {
         bookTable.updateInTable(_activeId);
         bookForm.setSubmitButtonText("Adicionar Livro");
     } else {
