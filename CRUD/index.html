@@ -9,12 +9,10 @@
     
 
     <title>CRUD HTML</title>
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.min.css" />
-    <!-- Boxiocns CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -23,126 +21,64 @@
     <![endif]-->
 </head>
     <body>
-        <div class="sidebar close">
-            <div class="logo-details">
-              <i class='bx bxl-c-plus-plus'></i>
-              <span class="logo_name">CodingLab</span>
-            </div>
-            <ul class="nav-links">
-              <li>
-                <a href="#">
-                  <i class='bx bx-grid-alt' ></i>
-                  <span class="link_name">Dashboard</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="#">Dashboard</a></li>
-                </ul>
-              </li>
-              <li>
-                <div class="iocn-link">
-                  <a href="#">
-                    <i class='bx bx-collection' ></i>
-                    <span class="link_name">Categoria</span>
-                  </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
-                </div>
-                <ul class="sub-menu">
-                  <li><a class="link_name" href="#">Categoria</a></li>
-                  <li><a href="https://erifranca.github.io/Site-Responsivo/NewFlix">HTML & CSS</a></li>
-                  <li><a href="#">JavaScript</a></li>
-                  <li><a href="#">PHP & MySQL</a></li>
-                </ul>
-              </li>
-              <li>
-                <div class="iocn-link">
-                  <a href="#">
-                    <i class='bx bx-book-alt' ></i>
-                    <span class="link_name">Postagens</span>
-                  </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
-                </div>
-                <ul class="sub-menu">
-                  <li><a class="link_name" href="#">Postagens</a></li>
-                  <li><a href="https://erifranca.github.io/Site-Responsivo/Postagens">Web Design</a></li>
-                  <li><a href="#">Login Form</a></li>
-                  <li><a href="#">Card Design</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-pie-chart-alt-2' ></i>
-                  <span class="link_name">Analises</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="#">Analises</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-line-chart' ></i>
-                  <span class="link_name">Gráficos</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="">Gráficos</a></li>
-                </ul>
-              </li>
-              <li>
-                <div class="iocn-link">
-                  <a href="#">
-                    <i class='bx bx-plug' ></i>
-                    <span class="link_name">Plugins</span>
-                  </a>
-                  <i class='bx bxs-chevron-down arrow' ></i>
-                </div>
-                <ul class="sub-menu">
-                  <li><a class="link_name" href="#">Plugins</a></li>
-                  <li><a href="https://erifranca.github.io/Site-Responsivo/CRUD">UI Face</a></li>
-                  <li><a href="#">Pigments</a></li>
-                  <li><a href="#">Box Icons</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-compass' ></i>
-                  <span class="link_name">Explore</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="#">Explore</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-history'></i>
-                  <span class="link_name">Histórico</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="#">Histórico</a></li>
-                </ul>
-              </li>
-              <li>
-                <a href="#">
-                  <i class='bx bx-cog' ></i>
-                  <span class="link_name">Configuração</span>
-                </a>
-                <ul class="sub-menu blank">
-                  <li><a class="link_name" href="#">Configuração</a></li>
-                </ul>
-              </li>
-              <li>
-            <div class="profile-details">
-              <div class="profile-content">
-                <img src="image/profile.jpg" alt="profileImg">
-              </div>
-              <div class="name-job">
-                <div class="profile_name">Eri França</div>
-                <div class="job">Web Designer</div>
-              </div>
-              <i class='bx bx-log-out' ></i>
-            </div>
-          </li>
-        </ul>
-          </div>
-        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>CRUD HTML</h2>
+                </div><!--// .col-md-6 -->
+            </div><!--// .row -->
+
+            <div class="row">
+                <div class="col-md-6">
+                    <table id="bookTable" class="table table-bordered table-condensed table-striped">
+                        <thead>
+                        <tr>
+                            <th>Chave de Acesso</th>
+                            <th>Fornecedor</th>
+                            <th>Nº da Nota</th>
+                            <th>Editar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div><!--// .col-md-6 -->
+
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Dados da Nota</div>
+                        <div class="panel-body">
+                            <form id="book-form">
+                                <div class="form-group">
+                                    <label for="title">Chave de Acesso</label>
+                                    <input type="text" name="title" id="book_title" class="form-control input-lg"
+                                           placeholder="Chave de Acesso">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="author">Fornecedor</label>
+                                    <input type="text" name="author" id="book_author" class="form-control input-lg"
+                                           placeholder="Fornecedor">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="publisher">Nº da Nota</label>
+                                    <input type="text" name="publisher" id="book_publisher" class="form-control input-lg"
+                                           placeholder="Nº da Nota">
+                                </div>
+
+                                <div class="form-group">
+                                    <button type="submit" id="updateButton" class="btn btn-lg btn-primary">
+                                        Adicionar Nota
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!--// .panel -->
+                </div><!--// .col-md -->
+            </div><!--// .row -->
+        </div><!--// .container -->
+
         <script type="text/html" id="bookTemplate">
             <tr>
                 <td><%- title %></td>
@@ -160,72 +96,6 @@
                 </td>
             </tr>
         </script>
-        
-        <section class="home-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>CRUD HTML</h2>
-                    </div><!--// .col-md-6 -->
-                </div><!--// .row -->
-    
-                <div class="row">
-                    <div class="col-md-6">
-                        <table id="bookTable" class="table table-bordered table-condensed table-striped">
-                            <thead>
-                            <tr>
-                                <th>Chave de Acesso</th>
-                                <th>Fornecedor</th>
-                                <th>Nº da Nota</th>
-                                <th>Editar</th>
-                                <th>Eliminar</th>
-                            </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                    </div><!--// .col-md-6 -->
-    
-                    <div class="col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">Dados da Nota</div>
-                            <div class="panel-body">
-                                <form id="book-form">
-                                    <div class="form-group">
-                                        <label for="title">Chave de Acesso</label>
-                                        <input type="text" name="title" id="book_title" class="form-control input-lg"
-                                               placeholder="Chave de Acesso">
-                                    </div>
-    
-                                    <div class="form-group">
-                                        <label for="author">Fornecedor</label>
-                                        <input type="text" name="author" id="book_author" class="form-control input-lg"
-                                               placeholder="Fornecedor">
-                                    </div>
-    
-                                    <div class="form-group">
-                                        <label for="publisher">Nº da Nota</label>
-                                        <input type="text" name="publisher" id="book_publisher" class="form-control input-lg"
-                                               placeholder="Nº da Nota">
-                                    </div>
-    
-                                    <div class="form-group">
-                                        <button type="submit" id="updateButton" class="btn btn-lg btn-primary">
-                                            Adicionar Nota
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div><!--// .panel -->
-                    </div><!--// .col-md -->
-                </div><!--// .row -->
-            </div><!--// .container -->
-            <div class="home-content">
-              <i class='bx bx-menu' ></i>
-              <span class="text">Portefólio</span>
-            </div>
-            
-        
-           </section>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -233,6 +103,5 @@
         <script src="js/book-form.js"></script>
         <script src="js/book-table.js"></script>
         <script src="js/main.js"></script>
-        <script src="script.js"></script>
     </body>
 </html>
