@@ -13,6 +13,81 @@
      
    </head>
 <body>
+  <div class="container"><!--Body completo do CRUD-->
+    <div class="row">
+        <div class="col-md-6">
+            <h2>CRUD HTML</h2>
+        </div><!--// .col-md-6 -->
+    </div><!--// .row -->
+
+    <div class="row">
+        <div class="col-md-6">
+            <table id="bookTable" class="table table-bordered table-condensed table-striped">
+                <thead>
+                <tr>
+                    <th>Chave de Acesso</th>
+                    <th>Fornecedor</th>
+                    <th>Nº da Nota</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div><!--// .col-md-6 -->
+
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Dados da Nota</div>
+                <div class="panel-body">
+                    <form id="book-form">
+                        <div class="form-group">
+                            <label for="title">Chave de Acesso</label>
+                            <input type="text" name="title" id="book_title" class="form-control input-lg"
+                                   placeholder="Chave de Acesso">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author">Fornecedor</label>
+                            <input type="text" name="author" id="book_author" class="form-control input-lg"
+                                   placeholder="Fornecedor">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="publisher">Nº da Nota</label>
+                            <input type="text" name="publisher" id="book_publisher" class="form-control input-lg"
+                                   placeholder="Nº da Nota">
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" id="updateButton" class="btn btn-lg btn-primary">
+                                Adicionar Nota
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div><!--// .panel -->
+        </div><!--// .col-md -->
+    </div><!--// .row -->
+</div><!--// .container -->
+
+<script type="text/html" id="bookTemplate">
+    <tr>
+        <td><%- title %></td>
+        <td><%- author %></td>
+        <td><%- publisher %></td>
+        <td>
+            <button type='button' class='book-edit btn btn-default' data-id='<%- id %>'>
+                <span class='glyphicon glyphicon-edit'></span>
+            </button>
+        </td>
+        <td>
+            <button type='button' class='book-delete btn btn-default' data-id='<%- id %>'>
+                <span class='glyphicon glyphicon-remove'></span>
+            </button>
+        </td>
+    </tr>
+</script>
    <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
