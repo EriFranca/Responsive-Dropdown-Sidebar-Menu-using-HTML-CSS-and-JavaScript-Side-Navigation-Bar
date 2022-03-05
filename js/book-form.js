@@ -25,10 +25,13 @@ const bookForm = (function($){
         };
     }
 
-    function setData(title='', author='', publisher='') {
+    function setData(title='', author='', publisher='', agrupamento='', status='') {
         BOOK_TITLE.val(title);
         BOOK_AUTHOR.val(author);
         BOOK_PUBLISHER.val(publisher);
+        AGRUP.val(agrupamento);
+        STATUS.val(status);
+
     }
 
     function setSubmitButtonText(str) {
