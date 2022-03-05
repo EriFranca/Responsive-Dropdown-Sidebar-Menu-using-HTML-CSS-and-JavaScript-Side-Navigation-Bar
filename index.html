@@ -16,26 +16,6 @@
    </head>
 <body>
   
-
-
-<script type="text/html" id="bookTemplate">
-    <tr>
-        <td><%- title %></td>
-        <td><%- author %></td>
-        <td><%- publisher %></td>
-        <td>
-            <button type='button' class='book-edit btn btn-default' data-id='<%- id %>'>
-                <span class='glyphicon glyphicon-edit'></span>
-            </button>
-        </td>
-        <td>
-            <button type='button' class='book-delete btn btn-default' data-id='<%- id %>'>
-                <span class='glyphicon glyphicon-remove'></span>
-            </button>
-        </td>
-    </tr>
-</script>
-
 <div class="home-section">
   <div class="row">
     <div class="col-md-6">
@@ -235,6 +215,24 @@
     
 
    </section>
+
+   <script type="text/html" id="bookTemplate">
+    <tr>
+        <td><%- title %></td>
+        <td><%- author %></td>
+        <td><%- publisher %></td>
+        <td>
+            <button type='button' class='book-edit btn btn-default' data-id='<%- id %>'>
+                <span class='glyphicon glyphicon-edit'></span>
+            </button>
+        </td>
+        <td>
+            <button type='button' class='book-delete btn btn-default' data-id='<%- id %>'>
+                <span class='glyphicon glyphicon-remove'></span>
+            </button>
+        </td>
+    </tr>
+</script>
   <script src="script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
