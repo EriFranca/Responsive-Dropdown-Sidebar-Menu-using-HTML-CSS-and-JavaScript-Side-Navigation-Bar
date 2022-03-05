@@ -2,6 +2,8 @@ const bookForm = (function($){
     const BOOK_TITLE = $("#book_title");
     const BOOK_AUTHOR = $("#book_author");
     const BOOK_PUBLISHER = $("#book_publisher");
+    const AGRUP = $("#agrupamento");
+    const STATUS = $("#status");
     const BOOK_UPDATE_BUTTON = $("#updateButton");
 
     function clear() {
