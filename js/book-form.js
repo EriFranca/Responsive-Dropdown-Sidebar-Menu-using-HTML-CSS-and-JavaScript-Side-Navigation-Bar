@@ -20,6 +20,8 @@ const bookForm = (function($){
             title: BOOK_TITLE.val(),
             author: BOOK_AUTHOR.val(),
             publisher: BOOK_PUBLISHER.val(),
+            agrupamento: AGRUP.val(),
+            status: STATUS.val(),
         };
     }
 
