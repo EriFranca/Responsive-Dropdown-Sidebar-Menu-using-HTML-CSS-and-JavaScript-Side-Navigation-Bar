@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+/*Style Sidebar*/
 .sidebar{
   position: fixed;
   top: 0;
@@ -209,6 +210,11 @@
 .sidebar .profile-details .job{
   font-size: 12px;
 }
+.sidebar.close ~ .home-section{
+  left: 78px;
+  width: calc(100% - 78px);
+}
+/*Style Home*/
 .home-section{
   position: sticky;
   /*background: linear-gradient(-45deg, rgb(36 0 0) 0%, rgb(121 9 63) 35%, rgb(98 0 255) 100%);*/
@@ -224,11 +230,6 @@
   height: auto;
   left: auto;
   width: calc(100% - 260px);
-}
-
-.sidebar.close ~ .home-section{
-  left: 78px;
-  width: calc(100% - 78px);
 }
 .home-section .home-content{
   height: 60px;
