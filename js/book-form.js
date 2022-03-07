@@ -7,6 +7,7 @@ const bookForm = (function($){
     const TIME =$("#hora");
     const BOOK_UPDATE_BUTTON = $("#updateButton");
 
+    
     function clear() {
         setData();
         BOOK_TITLE.focus();
