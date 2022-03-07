@@ -10,7 +10,7 @@ function handleBookEdit() {
     const row = $(this).parents("tr");
     const cols = row.children("td");
 
-    _activeId = $($(cols[3]).children("button")[0]).data("id");
+    _activeId = $($(cols[5]).children("button")[0]).data("id");
 
     bookForm.setData($(cols[0]).text(), $(cols[1]).text(), $(cols[2]).text());
 
