@@ -12,7 +12,7 @@ function handleBookEdit() {
 
     _activeId = $($(cols[5]).children("button")[0]).data("id");
 
-    bookForm.setData($(cols[0]).text(), $(cols[1]).text(), $(cols[2]).text());
+    bookForm.setData($(cols[0]).text(), $(cols[1]).text(), $(cols[2]).text(), $(cols[3]).text(), $(cols[4]).text());
 
     bookForm.setSubmitButtonText("Actualizar");
 }
