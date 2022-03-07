@@ -39,6 +39,7 @@ var tz      = data.getTimezoneOffset(); // em minutos
             agrupamento: AGRUP.val(),
             status: STATUS.val(),
             hora:TIME.val(),
+           
         };
     }
 
@@ -49,6 +50,7 @@ var tz      = data.getTimezoneOffset(); // em minutos
         AGRUP.val(agrupamento);
         STATUS.val(status);
         TIME.val(hora);
+        
 
     }
 
