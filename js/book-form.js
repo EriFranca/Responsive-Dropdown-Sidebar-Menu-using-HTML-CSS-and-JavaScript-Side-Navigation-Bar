@@ -3,8 +3,8 @@ const bookForm = (function($){
     const BOOK_AUTHOR = $("#book_author");
     const BOOK_PUBLISHER = $("#book_publisher");
     const AGRUP = $("#agrupamento");
-    const TIME =$("#hora");
     const STATUS = $("#status");
+    const TIME =$("#hora");
     const BOOK_UPDATE_BUTTON = $("#updateButton");
 
     function clear() {
@@ -22,12 +22,12 @@ const bookForm = (function($){
             author: BOOK_AUTHOR.val(),
             publisher: BOOK_PUBLISHER.val(),
             agrupamento: AGRUP.val(),
-            hora:TIME.val(),
             status: STATUS.val(),
+            hora:TIME.val(),
         };
     }
 
-    function setData(title='', author='', publisher='', agrupamento='',hora='', status='') {
+    function setData(title='', author='', publisher='', agrupamento='',status='',hora='') {
         BOOK_TITLE.val(title);
         BOOK_AUTHOR.val(author);
         BOOK_PUBLISHER.val(publisher);
