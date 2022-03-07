@@ -7,20 +7,36 @@ const bookForm = (function($){
     const TIME =$("#hora");
     const BOOK_UPDATE_BUTTON = $("#updateButton");
 
-    // Obtém a data/hora atual
-var data = new Date();
-
-// Guarda cada pedaço em uma variável
-var dia     = data.getDate();           // 1-31
-var dia_sem = data.getDay();            // 0-6 (zero=domingo)
-var mes     = data.getMonth();          // 0-11 (zero=janeiro)
-var ano2    = data.getYear();           // 2 dígitos
-var ano4    = data.getFullYear();       // 4 dígitos
-var hora    = data.getHours();          // 0-23
-var min     = data.getMinutes();        // 0-59
-var seg     = data.getSeconds();        // 0-59
-var mseg    = data.getMilliseconds();   // 0-999
-var tz      = data.getTimezoneOffset(); // em minutos
+    $("#botao-entrar").click(function(){
+        $('#datetime').html(getDataHora());
+       return false;
+     });
+     
+     
+     function getDataHora() {
+       // variáveis
+       var data = new Date();
+       var hora = data.getHours();
+       var minutos = data.getMinutes();
+       var segundos = data.getSeconds(); 
+       var mes = data.getMonth()+1;
+       var dia = data.getDate();
+       
+       // zero à esquerda se necessário
+       dia = dia < 10 ? '0' + dia :  dia;
+       mes = mes < 10 ? '0' + mes: mes;
+       hora =  hora < 10 ? '0' + hora: hora;
+       minutos = minutos < 10 ? '0' + minutos : minutos;
+       segundos = segundos  < 10 ? '0' + segundos : segundos;
+       
+       
+       // monta resultado
+       var resultado = dia + "/" + mes + "/" + data.getFullYear() + " " + hora + ':' + minutos + ':' + segundos;
+       
+       
+       return resultado;
+     }
+     
     
     function clear() {
         setData();
