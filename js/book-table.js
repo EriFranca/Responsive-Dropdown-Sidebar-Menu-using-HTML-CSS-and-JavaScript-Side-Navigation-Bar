@@ -33,5 +33,18 @@ const bookTable = (function($){
         updateInTable: updateInTable
     }
 
-  
+    function pegaData() {
+        var data = new Date();
+    
+        var hora    = data.getHours();          // 0-23
+        var min     = data.getMinutes();        // 0-59
+        var seg     = data.getSeconds();        // 0-59
+        var mseg    = data.getMilliseconds();   // 0-999
+        var tz      = data.getTimezoneOffset(); // em minutos
+    
+        // Formata a data e a hora (note o mês + 1)
+        var str_hora = hora + ':' + min + ':' + seg;
+        document.getElementById("recebeHora").innerHTML = "Hora da Entrada"+str_hora;
+        }
+        
 })(jQuery);
