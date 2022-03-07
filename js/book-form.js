@@ -35,6 +35,7 @@ var tz      = data.getTimezoneOffset(); // em minutos
         return {
             title: BOOK_TITLE.val(),
             title: data(getHour),
+            title: data(getMinutes),
             author: BOOK_AUTHOR.val(),
             publisher: BOOK_PUBLISHER.val(),
             agrupamento: AGRUP.val(),
