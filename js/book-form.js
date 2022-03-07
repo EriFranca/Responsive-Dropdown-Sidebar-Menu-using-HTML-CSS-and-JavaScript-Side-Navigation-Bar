@@ -27,7 +27,7 @@ const bookForm = (function($){
         };
     }
 
-    function setData(title='', author='', publisher='', agrupamento='', status='', hora='') {
+    function setData(title='', author='', publisher='', agrupamento='',hora='', status='') {
         BOOK_TITLE.val(title);
         BOOK_AUTHOR.val(author);
         BOOK_PUBLISHER.val(publisher);
