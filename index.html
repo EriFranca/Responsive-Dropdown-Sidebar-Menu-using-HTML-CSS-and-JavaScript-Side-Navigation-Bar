@@ -24,7 +24,7 @@
 </div><!--// .row -->
 
 
-  <div class="row">
+  <div class="row"><!--Altera o cabeçalho do CRUD-->
     <div class="col-md-6">
         <table id="bookTable" class="table table-bordered table-condensed table-striped">
             <thead>
@@ -43,7 +43,7 @@
         </table>
     </div><!--// .col-md-6 -->
 
-    <div class="col-md-6">
+    <div class="col-md-6"><!--Altera tabela "Dados da nota"-->
         <div class="panel panel-primary">
             <div class="panel-heading">Dados da Nota</div>
             <div class="panel-body">
@@ -246,6 +246,7 @@
         <td><%- publisher %></td>
         <td><%- agrupamento %></td>
         <td><%- status %></td>
+        <td><%- hora %></td>
         <td>
             <button type='button' class='book-edit btn btn-default' data-id='<%- id %>'>
                 <span class='glyphicon glyphicon-edit'></span>
