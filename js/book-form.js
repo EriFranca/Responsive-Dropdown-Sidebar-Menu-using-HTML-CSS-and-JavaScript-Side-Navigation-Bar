@@ -54,8 +54,7 @@ const bookForm = (function($){
 
     function setSubmitButtonText(str) {
         BOOK_UPDATE_BUTTON.text(str);
-        return pegaData.val();
-    }
+     }
 
     function getSubmitButtonText() {
         return BOOK_UPDATE_BUTTON.text();
