@@ -22,6 +22,7 @@ const bookForm = (function($){
             author: BOOK_AUTHOR.val(),
             publisher: BOOK_PUBLISHER.val(),
             agrupamento: AGRUP.val(),
+            hora:TIME.val(),
             status: STATUS.val(),
         };
     }
