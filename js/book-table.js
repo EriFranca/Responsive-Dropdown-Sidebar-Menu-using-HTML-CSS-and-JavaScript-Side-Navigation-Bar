@@ -32,4 +32,10 @@ const bookTable = (function($){
         addToTable: addToTable,
         updateInTable: updateInTable
     }
+
+    function time(){
+        now = new Date
+document.write ( now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds())
+    }
+    
 })(jQuery);
