@@ -7,12 +7,7 @@ const bookForm = (function($){
     const TIME =$("#hora");
     const BOOK_UPDATE_BUTTON = $("#updateButton");
 
-    $("#botao-entrar").click(function(){
-        $('#datetime').html(getDataHora());
-       return false;
-     });
-    
-     
+   
     
     function clear() {
         setData();

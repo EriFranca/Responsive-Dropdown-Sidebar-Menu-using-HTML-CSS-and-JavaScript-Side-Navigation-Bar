@@ -42,3 +42,33 @@ function handleBookSubmission(e) {
 BOOK_TABLE.on('click', '.book-edit', handleBookEdit);
 BOOK_TABLE.on('click', '.book-delete', handleBookDeleteClick);
 BOOK_FORM.on('submit', handleBookSubmission);
+
+$("#updateButton").click(function(){
+    $('#datetime').html(getDataHora());
+   return false;
+ });
+ 
+ 
+ function getDataHora() {
+   // variáveis
+   var data = new Date();
+   var hora = data.getHours();
+   var minutos = data.getMinutes();
+   var segundos = data.getSeconds(); 
+   var mes = data.getMonth()+1;
+   var dia = data.getDate();
+   
+   // zero à esquerda se necessário
+   dia = dia < 10 ? '0' + dia :  dia;
+   mes = mes < 10 ? '0' + mes: mes;
+   hora =  hora < 10 ? '0' + hora: hora;
+   minutos = minutos < 10 ? '0' + minutos : minutos;
+   segundos = segundos  < 10 ? '0' + segundos : segundos;
+   
+   
+   // monta resultado
+   var resultado = dia + "/" + mes + "/" + data.getFullYear() + " " + hora + ':' + minutos + ':' + segundos;
+   
+   
+   return resultado;
+ }
