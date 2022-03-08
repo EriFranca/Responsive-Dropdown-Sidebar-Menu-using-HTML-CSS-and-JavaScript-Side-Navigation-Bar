@@ -43,8 +43,9 @@ BOOK_TABLE.on('click', '.book-edit', handleBookEdit);
 BOOK_TABLE.on('click', '.book-delete', handleBookDeleteClick);
 BOOK_FORM.on('submit', handleBookSubmission);
 
+
 $("#updateButton").click(function(){
-    $('#datetime').html(getDataHora());
+    $('#updateButton').html(getDataHora());
    return false;
  });
  
